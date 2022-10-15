@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+}
+
+.curtains-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.plane-container {
+	margin: 20vh auto;
+	display: grid;
+	width: 90vw;
+
+	&.direct {
+		grid-template-columns: 2fr 8fr;
+
+		.plane-details {
+			order: 1;
+		}
+		.plane-image {
+			order: 2;
+		}
+	}
+	&.reverse {
+		grid-template-columns: 8fr 2fr;
+		.plane-details {
+			order: 2;
+		}
+		.plane-image {
+			order: 1;
+		}
+	}
+	.plane-image {
+		height: 90vh;
+
+		img {
+			display: none;
+		}
+	}
+}
+
+.plane-details {
+	width: 140px;
+	align-self: center;
+	justify-self: center;
+	h6 {
+		font-size: 20px;
+		font-weight: 500;
+	}
+	p {
+		font-size: 12px;
+		line-height: 14.5px;
+		color: #666;
+	}
+
+	.vertical-line {
+		height: 1px;
+		width: 50px;
+		background-color: #424242;
+		margin: 20px 0 25px;
+	}
+}
+.Plane {
+	width: 60vw;
+	height: 60vh;
+	margin: 20vh auto;
+}
+
+.Plane img {
+	display: none;
+}
+
+.page-content {
+	margin: 500px 0;
+}
+#page-content {
+	padding: 250px 0;
+}
+.text-slider {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	pointer-events: none;
+
+	span {
+		position: fixed;
+		font-size: 90px;
+		font-weight: bold;
+		top: 50%;
+		transform: translate(calc(50vw - 50%), -50%);
+	}
+}
+
+.banner {
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	background-color: #ded6cf;
+
+	width: 80vw;
+	height: 500px;
+
+	&.top {
+		top: 0;
+		transform: translate(-50%, 0);
+	}
+
+	&.bottom {
+		bottom: 0;
+		transform: translate(-50%, 0);
+	}
+}
