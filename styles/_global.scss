@@ -1,13 +1,30 @@
-* {
+@font-face {
+	font-family: 'Lexend';
+	src: url('../assets/fonts/Lexend-Variable.ttf') format('truetype');
+	font-weight: 300 900;
+	font-style: oblique 0deg 10deg;
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 html,
 body {
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	box-sizing: border-box;
+	font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #222222;
 }
 
 .curtains-canvas {
@@ -26,7 +43,7 @@ body {
 	width: 90vw;
 
 	&.direct {
-		grid-template-columns: 2fr 8fr;
+		grid-template-columns: 3fr 7fr;
 
 		.plane-details {
 			order: 1;
@@ -36,7 +53,7 @@ body {
 		}
 	}
 	&.reverse {
-		grid-template-columns: 8fr 2fr;
+		grid-template-columns: 7fr 3fr;
 		.plane-details {
 			order: 2;
 		}
@@ -58,7 +75,7 @@ body {
 	align-self: center;
 	justify-self: center;
 	h6 {
-		font-size: 20px;
+		font-size: 3rem;
 		font-weight: 500;
 	}
 	p {
@@ -109,10 +126,11 @@ body {
 	position: absolute;
 	z-index: -1;
 	left: 50%;
-	background-color: #ded6cf;
+	background-color: #5f4bb6;
 
 	width: 80vw;
 	height: 500px;
+	text-align: center;
 
 	&.top {
 		top: 0;

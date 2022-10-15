@@ -53,7 +53,7 @@ const Gallery = () => {
 
 	return (
 		<>
-			<div className='banner top' />
+			<div className='banner top'></div>
 			<div id='page-content'>
 				{unsplashUrls.map(({ url, title, description }, index) => (
 					<SinglePlane
